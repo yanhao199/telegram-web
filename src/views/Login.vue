@@ -1,13 +1,18 @@
 <template>
-  <div class="login_container"></div>
+  <div class="login_container">
+    <el-image :src="urls"></el-image>
+  </div>
 </template>
 
 <script>
 export default {
   data () {
-    return {}
+    return {
+      urls: '../assets/img/1.png'
+    }
   },
   methods: {
+
   }
 }
 </script>
