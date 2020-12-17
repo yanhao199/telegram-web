@@ -5,7 +5,7 @@ import Login from '@/views/Login.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', redirect: '/home' },
+  { path: '/', redirect: '/login' },
   { path: '/login', component: Login },
   { path: '/home', component: () => import('@/views/Home.vue') }
   // {
