@@ -23,7 +23,12 @@
 
 <script>
 export default {
-
+  data () {
+    return {
+      inquireSelect: '',
+      inquire: ''
+    }
+  }
 }
 </script>
 

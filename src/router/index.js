@@ -1,21 +1,32 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '@/components/Login.vue'
-import Home from '@/components/Home.vue'
+import Home from '@/layout/Home.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', redirect: '/login' },
-  { path: '/login', component: Login },
   {
-    path: '/home',
+    path: '/',
+    name: 'home',
+    redirect: 'inquire',
     component: Home,
-    redirect: '/inquire',
     children: [
-      { path: '/inquire', component: () => import('@/components/pages/Inquire.vue') }
+      {
+        name: 'inquire',
+        path: 'inquire',
+        component: () => import('@/components/pages/Inquire.vue')
+      },
+      { path: '/groupchat', component: () => import('@/components/pages/Groupchat.vue') },
+      {
+        name: 'jointsearch',
+        path: 'jointsearch',
+        component: () => import('@/components/pages/jointsearch.vue')
+      },
+      { path: '/jointsearch', component: () => import('@/components/pages/jointsearch.vue') }
     ]
-  }
+  },
+  { path: '/login', component: Login }
 ]
 
 const router = new VueRouter({

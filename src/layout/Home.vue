@@ -15,8 +15,8 @@
           :default-active="activePath"
         >
           <el-menu-item index="/inquire">账号联查</el-menu-item>
-          <el-menu-item index="#">群聊检索</el-menu-item>
-          <el-menu-item index="#">群组联查</el-menu-item>
+          <el-menu-item index="/groupchat">群聊检索</el-menu-item>
+          <el-menu-item index="/jointsearch">群组联查</el-menu-item>
         </el-menu>
         <div class="loginout" @click="loginout"><span>退出登录</span></div>
       </el-header>
